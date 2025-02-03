@@ -30,4 +30,4 @@ To set up on your local machine, follow these steps:
 If you have any questions about this project, feel free to reach out:
 - GitHub: erindagfoley
 - Email: erindagfoley@gmail.com
-- You may view a tutorial on how to use this at https://
+- You may view a tutorial on how to use this at https://tinyurl.com/foley-employee-tracker
