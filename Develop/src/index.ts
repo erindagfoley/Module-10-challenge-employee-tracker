@@ -3,6 +3,12 @@ import inquirer from 'inquirer';
 import { pool, connectToDb } from './db/connection.js';
 await connectToDb();
 
+// const PORT = process.env.PORT || 3001;
+// const app = express();
+
+// // Express middleware
+// app.use(express.urlencoded({ extended: false }));
+// app.use(express.json());
 
 function showMenu(){
   inquirer.prompt([{
@@ -129,6 +135,33 @@ function addNewEmployee() {
     });
 }
 
+function updateEmployeeRole() {
+  inquirer
+    .prompt([
+      {
+        type: 'input',
+        name: 'newRole',
+        message: 'Enter the id of the role you want to assign:',
+      },
+      {
+        type: 'input',
+        name: 'updateEmployee',
+        message: 'Enter the id of the employee you want to update:',
+      },
+    ])
+    .then((response) => {
+      pool.query('UPDATE employee SET role_id = $1 WHERE id = $2;',
+        [response.newRole, response.updateEmployee], (err, result) => {
+          if (err) {
+            console.error(err);
+        } else if (result) {
+            console.log(`Employee ${response.updateEmployee} now has role ${response.newRole}`);
+          }
+          showMenu();
+        });
+    });
+};
+
 function addNewRole() {
   inquirer
     .prompt([
@@ -160,3 +193,7 @@ function addNewRole() {
         });
     });
 }
+
+// app.listen(PORT, () => {
+//     console.log(`Server running on port ${PORT}`);
+//   });
