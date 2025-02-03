@@ -19,11 +19,12 @@ To set up on your local machine, follow these steps:
 2. Navigate to the repository
 
 ## Usage
-1. Open the cloned repository in Visual Studio Code or your preferred source code editor.
+1. Open the cloned repository in Visual Studio Code or your preferred source code editor
 2. Open the integrated terminal
-3. Install the inquirer package as a dependency
-4. Update your .env file with your own postgreSQL information
-5. Use the node dist/index.js command to start the prompts in the integrated terminal
+3. Update your .env file with your own postgreSQL information
+4. Build your database by logging into postgreSQL and running the \i db/schema.sql and \i db/seed.sql commands
+5. Install all required dependencies by running the npm i command
+6. Use the npm run start command to start the prompts in the integrated terminal
 
 ## Questions
 If you have any questions about this project, feel free to reach out:
