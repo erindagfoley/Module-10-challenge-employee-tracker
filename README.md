@@ -5,6 +5,8 @@ This application stores vehicles and allows you to add new vehicles. It allows y
 
 This application builds and utilizes a postgreSQL database to track employee information such as role, department, salary, etc. In addition, it uses TypeScript to compile and run specific code based on user responses.
 
+https://lh3.googleusercontent.com/pn854Kxw47kNXwd4t4yiEOVoEA_jNSJKtFSTtvPuEIzvP4qUAHXHmtdSfpkx2jOuuUx_Pm6IWjKkbB_nZ-ioSz1iIepCFH76TY9edlkUBL_m6htk5CMS94MUgtoYN45t9A=w1280 
+
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
